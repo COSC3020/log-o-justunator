@@ -12,3 +12,22 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
+
+
+Using the definition of $O$, we can obtain:
+
+$T(n) \leq c \cdot \log_{2}n$ for all $T(n) \in \log_{2}n$
+
+$T(n) \leq c \cdot \log_{5}n$ for all $T(n) \in \log_{5}n$
+
+Using change of base log rules, we can obtain
+
+$T(n) \leq c \cdot \log_{5}(2)\log_{5}n$
+
+$c \cdot \log_{5}(2)$ is a constant d
+
+$T(n) \leq d \cdot \log_{5}n$ 
+
+this means that $T(n) \in O(\log_{2}n) \iff \exists c, n_0: T(n) \leq d \cdot \log_{5}n$
+
+this means that $T(n) \in \log_{2}$ is also in $\log_{5}$ and vice versa so logs with different bases don't affect asymptotically complxeity
