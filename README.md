@@ -12,3 +12,40 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
+
+
+Using the definition of $O$, we can obtain:
+
+$T(n) \leq c \cdot \log_{2}n$ for all $T(n) \in \log_{2}n$
+
+$T(n) \leq c \cdot \log_{5}n$ for all $T(n) \in \log_{5}n$
+
+Using change of base log rules, we can obtain
+
+$T(n) \leq c \cdot \log_{5}(2)\log_{5}n$
+
+$c \cdot \log_{5}(2)$ is a constant d
+
+$T(n) \leq d \cdot \log_{5}n$ 
+
+this means that $T(n) \in O(\log_{2}n) \iff \exists c, n_0: T(n) \leq d \cdot \log_{5}n$
+
+this means that $T(n) \in \log_{2}$ is also in $\log_{5}$
+
+Similarly, we can do the same thing to $\log_{5}n$
+
+$T(n) \leq c \cdot \log_{5}n$ for all $T(n) \in \log_{5}n$
+
+Using change of base log rules, we can obtain
+
+$T(n) \leq c \cdot \log_{2}(5)\log_{2}n$
+
+$c \cdot \log_{2}(5)$ is a constant d
+
+$T(n) \leq d \cdot \log_{2}n$ 
+
+this means that $T(n) \in O(\log_{5}n) \iff \exists c, n_0: T(n) \leq d \cdot \log_{2}n$
+
+this means that $T(n) \in \log_{5}$ is also in $\log_{2}$
+
+This means that both of them are elements of each other so logs with different bases don't affect asymptotic complexity
