@@ -30,4 +30,22 @@ $T(n) \leq d \cdot \log_{5}n$
 
 this means that $T(n) \in O(\log_{2}n) \iff \exists c, n_0: T(n) \leq d \cdot \log_{5}n$
 
-this means that $T(n) \in \log_{2}$ is also in $\log_{5}$ and vice versa so logs with different bases don't affect asymptotically complxeity
+this means that $T(n) \in \log_{2}$ is also in $\log_{5}$
+
+Similarly, we can do the same thing to $\log_{5}n$
+
+$T(n) \leq c \cdot \log_{5}n$ for all $T(n) \in \log_{5}n$
+
+Using change of base log rules, we can obtain
+
+$T(n) \leq c \cdot \log_{2}(5)\log_{2}n$
+
+$c \cdot \log_{2}(5)$ is a constant d
+
+$T(n) \leq d \cdot \log_{2}n$ 
+
+this means that $T(n) \in O(\log_{5}n) \iff \exists c, n_0: T(n) \leq d \cdot \log_{2}n$
+
+this means that $T(n) \in \log_{5}$ is also in $\log_{2}$
+
+This means that both of them are elements of each other so logs with different bases don't affect asymptotic complexity
